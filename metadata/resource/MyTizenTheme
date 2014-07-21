@@ -1,0 +1,18 @@
+{
+    "type": "tizenthemeresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyTizenTheme"
+    },
+    "designerId": "24de467c-6844-4cf8-b81c-99a264182edb",
+    "storage": {
+        "needsCompile": false,
+        "simple": {},
+        "nameIndex": 1,
+        "varData": {}
+    }
+}

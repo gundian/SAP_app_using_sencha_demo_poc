@@ -1,0 +1,86 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": false,
+        "designer|userAlias": "salesdetail",
+        "designer|userClassName": "SalesDetail",
+        "docked": null,
+        "height": "100%",
+        "itemId": "mytabpanel"
+    },
+    "designerId": "1d45ad95-b61f-4f22-aa0f-221c6b93f0b0",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "justify",
+                "docked": "bottom"
+            },
+            "designerId": "8316a52e-29d7-432e-8e45-704d06501e0f"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "team"
+            },
+            "designerId": "31efbf10-e55c-4b6a-8f4a-0dcb112c536b",
+            "masterInstanceId": "b4928aaf-ff92-4060-9509-abaae63097ad"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "user"
+            },
+            "designerId": "ebc0f18a-29d4-494a-8755-d126c3318b10",
+            "masterInstanceId": "46fe9fc8-ac2e-4cc6-b529-ab37283dbb25"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "iconCls": "info"
+            },
+            "designerId": "931c7761-b790-4211-b440-9b84ad59bba8",
+            "masterInstanceId": "981db4b6-5d23-4678-a455-215d98dc0d45"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "list"
+            },
+            "designerId": "df2300ba-518c-423b-bd29-4695ba08d83b",
+            "masterInstanceId": "951396d0-32f2-42a5-8adb-77ee13369c09"
+        }
+    ]
+}

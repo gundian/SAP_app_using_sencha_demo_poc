@@ -1,0 +1,59 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "bybusinesspartner",
+        "designer|userClassName": "ByBusinessPartner",
+        "emptyText": "No records found",
+        "grouped": false,
+        "itemId": "byBPList",
+        "masked": [
+            "{\r",
+            "    xtype: 'loadmask',\r",
+            "    indicator: true,\r",
+            "    message: 'Loading...'\r",
+            "}"
+        ],
+        "onItemDisclosure": true,
+        "store": "BusinessPartners",
+        "styleHtmlContent": true
+    },
+    "designerId": "1d2180b8-33b8-4b53-b823-328f0daa68a0",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><b>{CompanyName}</b></div>\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "eb51d8e0-9171-4aa7-893a-1b4ddf26a445"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true,
+                "designer|uiInterfaceName": "dark",
+                "ui": "dark"
+            },
+            "designerId": "7a6a936b-d7a2-4d9b-883a-2923952fdbb8"
+        }
+    ]
+}

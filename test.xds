@@ -1,0 +1,85 @@
+{
+    "name": "test",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "2.3.1.410"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost:88/sap/architect/test/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
+    },
+    "xdsVersion": "3.0.4",
+    "xdsBuild": 1386,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "ed028afd-d71b-4509-b56c-0ed684fd01e1",
+            "5f766276-5fd4-4afa-8cf9-aad3c3c41eee",
+            "62ee9761-4c3f-444d-9653-931250a2298a",
+            "bf17b0df-819e-4eac-89fd-d960491ef465",
+            "1d2180b8-33b8-4b53-b823-328f0daa68a0",
+            "1d45ad95-b61f-4f22-aa0f-221c6b93f0b0",
+            "b4928aaf-ff92-4060-9509-abaae63097ad",
+            "951396d0-32f2-42a5-8adb-77ee13369c09",
+            "981db4b6-5d23-4678-a455-215d98dc0d45",
+            "46fe9fc8-ac2e-4cc6-b529-ab37283dbb25",
+            "67ed3311-100f-4385-9fd2-0f023d9efab6",
+            "95363e2d-8d29-4c43-804b-b142cafb5825",
+            "29d390c6-8888-4bd1-b285-7066b41b53c4"
+        ],
+        "store": [
+            "b46470d1-9365-4aa7-8b92-b1c23175361d",
+            "306f68a4-c24d-43b2-9b8e-3edb5314f544",
+            "1d9a0e9d-3fde-4bed-928b-9ab5b63210b8",
+            "db850396-d0e7-4ab4-beef-6b508f221ef2",
+            "079d4ee0-ce88-43e4-a93b-10320f0f2427",
+            "66ccdfa3-4188-4d1a-8438-a01e339ea2c7"
+        ],
+        "controller": [
+            "281224ab-8461-4b2e-9888-353e3182bb15",
+            "037a193e-30a1-4be4-a8de-e41fa9f97733"
+        ],
+        "model": [
+            "24f34f68-0204-40fc-99d0-78629905b7fc",
+            "35741928-6686-44dc-974b-1a02ea4b133a",
+            "73b489e1-a9a9-4c44-a028-fedaa9e8c2a6",
+            "71d35e7d-1262-4904-b4ed-75e7550772b0",
+            "8b6acb6b-3d5a-409c-9fe5-6681a5d5a37a",
+            "df10733e-f136-4b29-867f-3fb0595b3830"
+        ],
+        "resource": [
+            "82da3b1e-2a17-4d60-972e-6d7d2cfca4d3",
+            "d2b668c0-a64b-491c-9336-b884a6e8d8ae",
+            "dfa74c3c-0877-4d1d-a4cd-529dc4097598",
+            "c4c1a5a5-0a79-427d-8cd9-0f43feff7cd8",
+            "af607eaa-a7f2-442c-ba27-04bd1a3fbcfb",
+            "24de467c-6844-4cf8-b81c-99a264182edb"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

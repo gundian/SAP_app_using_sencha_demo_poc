@@ -1,0 +1,26 @@
+{
+    "type": "Ext.carousel.Carousel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "graphcar",
+        "designer|userClassName": "GraphCar",
+        "styleHtmlContent": true
+    },
+    "designerId": "95363e2d-8d29-4c43-804b-b142cafb5825",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "4f62d458-b9c8-4b87-90f9-4a1640d25605",
+            "masterInstanceId": "29d390c6-8888-4bd1-b285-7066b41b53c4"
+        }
+    ]
+}

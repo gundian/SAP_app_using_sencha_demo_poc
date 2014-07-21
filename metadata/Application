@@ -1,0 +1,66 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Account",
+            "SalesControl"
+        ],
+        "models": [
+            "SalesHeader",
+            "SalesOrder",
+            "SalesItem",
+            "MaterialMaster",
+            "ChartModel"
+        ],
+        "name": "test",
+        "requires": [
+            "Ext.MessageBox",
+            "Ext.data.Connection"
+        ],
+        "stores": [
+            "SalesHeaders",
+            "SalesOrders",
+            "SalesItems",
+            "BusinessPartners",
+            "MaterialMasters",
+            "ChartStore"
+        ],
+        "views": [
+            "LoginForm",
+            "RegisterForm",
+            "SalesOrders",
+            "SalesDetail",
+            "SalesOrderView",
+            "SalesOrderItemList",
+            "BusinessPartner",
+            "MaterialMaster",
+            "MainView",
+            "ByBusinessPartner",
+            "MyBarChart",
+            "GraphCar"
+        ]
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "d96f6d9f-f9c4-477a-9cae-6c95ba83bc85"
+        }
+    ]
+}

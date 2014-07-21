@@ -1,0 +1,201 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "businesspartner",
+        "designer|userClassName": "BusinessPartner"
+    },
+    "designerId": "71d35e7d-1262-4904-b4ed-75e7550772b0",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BusinessPartnerID"
+            },
+            "designerId": "bd9b2a2c-b779-415e-9c3d-a2b328ebb1fd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Role"
+            },
+            "designerId": "8566cee8-68b1-4655-9b0e-c07b4530d4dc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EmailAddress"
+            },
+            "designerId": "94fad305-d3cd-46ba-a17f-adb89eb70800"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PhoneNumber"
+            },
+            "designerId": "00130991-2c5a-4315-94b4-08548cbdcfa3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FaxNumber"
+            },
+            "designerId": "ce1b9a1a-287e-4fa4-b2ad-75b8df696c6a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "WebAddress"
+            },
+            "designerId": "5a4f74f4-e16b-41fe-8520-d782aa3f2266"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CompanyName"
+            },
+            "designerId": "0649e2d8-c983-4bb2-8121-6af433ab1789"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LegalForm"
+            },
+            "designerId": "c254eade-5ba6-4a47-baf8-072f73f83920"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CurrencyCode"
+            },
+            "designerId": "e840d6d1-bb3e-4313-ac74-d2b72d40fedc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "City"
+            },
+            "designerId": "fc5d0705-8199-4ca7-a798-c7eb89b7c452"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PostalCode"
+            },
+            "designerId": "3ea06871-8132-4471-b03e-98932e198bc1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Street"
+            },
+            "designerId": "9ff6c388-55f0-4d6d-94ff-56f41bc429e3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Building"
+            },
+            "designerId": "3b6411d0-fd31-4bc2-bd35-683fcff7feb9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Country"
+            },
+            "designerId": "1dc85f57-330c-41c1-b887-0b0889545a1f"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "odata",
+                "enablePagingParams": false,
+                "password": "Praveen123",
+                "url": "https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/BusinessPartners('0100000002')",
+                "useDefaultXhrHeader": false,
+                "username": "P060866",
+                "withCredentials": true
+            },
+            "designerId": "6087663e-8bc6-46f3-bb1a-30041368c1fc"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesorders",
+        "designer|userClassName": "SalesOrders",
+        "emptyText": "No records found",
+        "grouped": true,
+        "itemId": "mylist1",
+        "masked": [
+            "{\r",
+            "    xtype: 'loadmask',\r",
+            "    indicator: true,\r",
+            "    message: 'Loading...'\r",
+            "}"
+        ],
+        "onItemDisclosure": true,
+        "store": "SalesHeaders",
+        "styleHtmlContent": true
+    },
+    "designerId": "bf17b0df-819e-4eac-89fd-d960491ef465",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><b>Order: </b>{SalesOrderID}</div>\r",
+                    "Created: {CreatedAt}\r",
+                    ""
+                ]
+            },
+            "designerId": "0f94da0d-9e1f-42eb-950d-8011ce09dd87"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true,
+                "designer|uiInterfaceName": "dark",
+                "ui": "dark"
+            },
+            "designerId": "b4fbfa9b-6b19-4678-a602-ed3feeb1d4eb"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "30ed6611-2fcf-4f96-970a-a26d298a5f6c"
+        }
+    ]
+}

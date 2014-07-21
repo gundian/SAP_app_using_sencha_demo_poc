@@ -1,0 +1,118 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SalesHeaders",
+        "model": "SalesHeader",
+        "storeId": "SalesHeaders"
+    },
+    "designerId": "b46470d1-9365-4aa7-8b92-b1c23175361d",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "SalesOrderID"
+            },
+            "designerId": "af468ade-adc3-420a-886c-38b9782f5790"
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "447f3778-be91-4282-94a9-b2e6c162ac78",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "//return item.get('BusinessPartnerID');\r",
+                            "\r",
+                            "return item.get('BusinessPartnerID') + \" - \" + item.get('CustomerName');\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "f0715da7-66ad-4482-8cae-3d2a1e3e1c29"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    "\r",
+                    "var tmpCustName=\"\";\r",
+                    "var tmpCounter=0;\r",
+                    "var tmpAmount=0;\r",
+                    "\r",
+                    "aa = Ext.getStore('ChartStore');\r",
+                    "aa.removeAll();\r",
+                    "\r",
+                    "for (i=0; i<store.getCount(); i++){\r",
+                    "\r",
+                    "    var custName = store.getAt(i).getData().CustomerName;\r",
+                    "\r",
+                    "    if ( i===0){\r",
+                    "        tmpCustName = custName;\r",
+                    "\r",
+                    "    }\r",
+                    "    if (custName === tmpCustName){\r",
+                    "        tmpCounter =  tmpCounter + 1;\r",
+                    "        tmpAmount = store.getAt(i).getData().TotalSum;\r",
+                    "        var z = store.getCount()-1;\r",
+                    "        if (i === z) {\r",
+                    "             //console.log (tmpCustName + \"final >>>>\" + tmpCounter);\r",
+                    "            aa.add({ name: tmpCustName, OrderCount: tmpCounter , OrderAmount: tmpAmount });\r",
+                    "        }\r",
+                    "\r",
+                    "   }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        //console.log (tmpCustName + \">>>>\" + tmpCounter);\r",
+                    "        aa.add({ name: tmpCustName, OrderCount: tmpCounter ,OrderAmount: tmpAmount});\r",
+                    "        tmpCounter=1;\r",
+                    "        tmpAmount = 0;\r",
+                    "        tmpCustName=custName;\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "}\r",
+                    "aa.sync();\r",
+                    "\r",
+                    "//console.log(\"Chart Store updated, now Graph table has : \" + aa.getCount() + \" records\");\r",
+                    "\r",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "d6fb092f-90b9-45b9-851b-082f3d63a476"
+        }
+    ]
+}

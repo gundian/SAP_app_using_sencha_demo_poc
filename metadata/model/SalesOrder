@@ -1,0 +1,190 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesorder",
+        "designer|userClassName": "SalesOrder"
+    },
+    "designerId": "35741928-6686-44dc-974b-1a02ea4b133a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "SalesOrderID"
+            },
+            "designerId": "8d99804e-5f32-45c0-a013-fdf262ef1ceb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NetSum"
+            },
+            "designerId": "17c818d5-5b3d-484d-ac4b-9704ae8dad9f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Tax"
+            },
+            "designerId": "37efa7f4-de4c-48ae-8fc2-bc2bafdd6b7f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Currency"
+            },
+            "designerId": "ff99cd40-7ccd-4e9a-9ab0-9346581186b8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ChangedAt"
+            },
+            "designerId": "a77d0b6a-4014-4319-aded-c60ba766b318"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Note"
+            },
+            "designerId": "d43d0414-81f7-4393-a93b-ee5747d9cc94"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CreatedAt"
+            },
+            "designerId": "a2ff32ac-57bb-45d3-99b9-dc03c82662e9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TotalSum"
+            },
+            "designerId": "8026dd90-6b3e-492d-86ad-9c52b1131788"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Status"
+            },
+            "designerId": "b98cc791-abb8-40cc-a8c4-3b240d036daa",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "if (v===\"N\"){\r",
+                            "    return \"New\";\r",
+                            "}else{\r",
+                            "    return \"Completed\";\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "38466ae4-c8b0-447a-ab18-b2e46147c265"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CustomerName"
+            },
+            "designerId": "1bde023e-bbe0-4d16-9f1c-600963ab5b88"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BusinessPartnerID"
+            },
+            "designerId": "bfac7d41-68fb-4eb0-8ffe-dc89f402944b"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "odata",
+                "enablePagingParams": false,
+                "password": "Praveen123",
+                "url": "https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/SalesOrders('0500000003')",
+                "useDefaultXhrHeader": false,
+                "username": "P060866",
+                "withCredentials": true
+            },
+            "designerId": "5e3cf99b-54f2-443b-bddd-d0e7db0537c1"
+        }
+    ]
+}

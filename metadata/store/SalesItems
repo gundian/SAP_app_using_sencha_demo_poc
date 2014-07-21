@@ -1,0 +1,46 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesitems",
+        "designer|userClassName": "SalesItems",
+        "model": "SalesItem",
+        "storeId": "SalesItems"
+    },
+    "designerId": "1d9a0e9d-3fde-4bed-928b-9ab5b63210b8",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "037beb3f-89ea-4694-aed2-6c7188b34447",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "return item.get('Position');"
+                        ]
+                    },
+                    "designerId": "18a9378c-0822-4389-8886-48a9c72f80ac"
+                }
+            ]
+        }
+    ]
+}

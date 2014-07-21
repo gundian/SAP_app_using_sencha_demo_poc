@@ -1,0 +1,183 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "businesspartner",
+        "designer|userClassName": "BusinessPartner",
+        "itemId": "myformpanel2"
+    },
+    "designerId": "46fe9fc8-ac2e-4cc6-b529-ab37283dbb25",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": false,
+                "instructions": "Customer Details",
+                "itemId": "myfieldset2",
+                "styleHtmlContent": true,
+                "title": "Business Partner"
+            },
+            "designerId": "a0cc7480-1524-4df4-8c6f-0cebf64afd56",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Company Name",
+                        "name": "CompanyName",
+                        "readOnly": true
+                    },
+                    "designerId": "46b3b9d6-1489-4e01-9c0b-2fd075098d66"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Customer",
+                        "name": "BusinessPartnerID",
+                        "readOnly": true
+                    },
+                    "designerId": "663880fb-a44a-4532-849f-ddf4688782ab"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "E-Mail",
+                        "name": "EmailAddress",
+                        "readOnly": true
+                    },
+                    "designerId": "753f61b7-8f72-4902-825b-98ca2e512da3"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Phone",
+                        "name": "PhoneNumber",
+                        "readOnly": true
+                    },
+                    "designerId": "d5993ac0-1f7a-4634-83f5-cd6bdec1567a"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Fax",
+                        "name": "FaxNumber",
+                        "readOnly": true
+                    },
+                    "designerId": "59b24605-eb10-4e08-952f-2d5e4dd13390"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Website",
+                        "name": "WebAddress",
+                        "readOnly": true
+                    },
+                    "designerId": "35b20ddb-3712-44e2-8e9d-13462e4ec2e9"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Street",
+                        "name": "Street",
+                        "readOnly": true
+                    },
+                    "designerId": "6d371213-e8ec-4b15-93cc-9a8c525cc245"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "City",
+                        "name": "City",
+                        "readOnly": true
+                    },
+                    "designerId": "88f930ae-8b28-4363-9bb0-d2625f155495"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "ZIP Code",
+                        "name": "PostalCode",
+                        "readOnly": true
+                    },
+                    "designerId": "bb9b3d61-6230-4a82-98bd-39287760221c"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMyformpanelPainted",
+                "implHandler": [
+                    "\r",
+                    "data = Ext.getStore('BusinessPartners');\r",
+                    "data1 = data.getAt(0);\r",
+                    "\r",
+                    "//var data = this;\r",
+                    "//console.log(\"Completed paint event for form\");\r",
+                    "this.setValues(data1.getData());\r",
+                    "//http://stackoverflow.com/questions/17899171/how-to-pass-the-selected-item-to-the-next-view"
+                ],
+                "name": "painted"
+            },
+            "designerId": "67d91153-d160-4182-9148-afeec7edf4b5"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesorderitemlist",
+        "designer|userClassName": "SalesOrderItemList",
+        "emptyText": "No List Items found for Sales Order",
+        "grouped": true,
+        "id": null,
+        "itemId": "salesitemlist",
+        "masked": [
+            "{\r",
+            "    xtype: 'loadmask',\r",
+            "    indicator: true,\r",
+            "    message: 'Loading...'\r",
+            "}"
+        ],
+        "pinHeaders": false,
+        "store": "SalesItems",
+        "styleHtmlContent": true
+    },
+    "designerId": "951396d0-32f2-42a5-8adb-77ee13369c09",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "{ProductName} - ${TotalSum}"
+                ]
+            },
+            "designerId": "ce3e87cd-257d-4f25-ab09-cd5459147554"
+        }
+    ]
+}

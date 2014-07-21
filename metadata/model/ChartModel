@@ -1,0 +1,51 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "chartmodel",
+        "designer|userClassName": "ChartModel"
+    },
+    "designerId": "df10733e-f136-4b29-867f-3fb0595b3830",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "a846ebbd-a7e7-4af3-96fc-0a9c3e074e49"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "OrderCount"
+            },
+            "designerId": "0b650392-e270-4ad8-9cde-178596f63fef"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "OrderAmount"
+            },
+            "designerId": "53aba051-444c-4bde-9e01-a0cd5d6bff41"
+        }
+    ]
+}

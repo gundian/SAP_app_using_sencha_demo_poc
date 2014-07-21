@@ -1,0 +1,313 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salescontrol",
+        "designer|userClassName": "SalesControl",
+        "requires": [
+            "test.view.SalesOrders"
+        ]
+    },
+    "designerId": "037a193e-30a1-4be4-a8de-e41fa9f97733",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "salesOrders",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "//console.log(record.get('SalesOrderID'));\r",
+                    "\r",
+                    "\r",
+                    "//Load the Store SalesOrders\r",
+                    "\r",
+                    "var cListStore = Ext.getStore('SalesOrders');\r",
+                    "var tmpUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/SalesOrders('\" + record.get('SalesOrderID') + \"')\";\r",
+                    "cListStore.removeAll();\r",
+                    "cListStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "cListStore.getProxy().setUrl(tmpUrl);\r",
+                    "cListStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Request Status : \" + response.success);\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "//Load the Store SalesOrders\r",
+                    "\r",
+                    "var itemStore = Ext.getStore('SalesItems');\r",
+                    "var itemUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/SalesOrders('\" + record.get('SalesOrderID') + \"')/SalesOrderItems\";\r",
+                    "\r",
+                    "itemStore.removeAll();\r",
+                    "itemStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "itemStore.getProxy().setUrl(itemUrl);\r",
+                    "itemStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Item Request Status : \" + response.success);\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "//Load the Store BusinessPartner\r",
+                    "var businessStore = Ext.getStore('BusinessPartners');\r",
+                    "var businessUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/BusinessPartners('\" + record.get('BusinessPartnerID') + \"')\";\r",
+                    "businessStore.removeAll();\r",
+                    "businessStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "businessStore.getProxy().setEnablePagingParams(false);\r",
+                    "businessStore.getProxy().setUseDefaultXhrHeader(false);\r",
+                    "businessStore.getProxy().setUrl(businessUrl);\r",
+                    "businessStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Business Partner Request Status : \" + response.success);\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "//Load next page\r",
+                    "var loginForm = Ext.create('widget.salesdetail'),\t// Login form\r",
+                    "    mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "mainView.push({\r",
+                    "    xtype: \"salesdetail\",\r",
+                    "    title: \"Details\",\r",
+                    "    data: record.getData()\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "/*\r",
+                    "\r",
+                    "//Load next page\r",
+                    "var loginForm = Ext.create('widget.salesorderview'),\t// Login form\r",
+                    "    mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "mainView.push({\r",
+                    "    xtype: \"salesorderview\",\r",
+                    "    title: \"Details\",\r",
+                    "    data: record.getData()\r",
+                    "});\r",
+                    "*/"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "c4b1b2df-1f84-4095-8c31-e1081f37daa0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "salesOrders",
+                "selector": "list#mylist1"
+            },
+            "designerId": "766d5f86-fec6-4f3f-a73b-a8a50bfd3847"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "salesDetail",
+                "selector": "tabpanel#mytabpanel"
+            },
+            "designerId": "20bc2835-27c0-48b0-99fb-c9c01fe1d6e6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "navigationview#mynavigationview1"
+            },
+            "designerId": "cf1c81ec-715c-4409-8c46-2014dbacd7fa"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "salesOrderView",
+                "selector": "formpanel#myformpanel"
+            },
+            "designerId": "5d960096-d21a-4849-a502-cbe465123892"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "salesOrderItemList",
+                "selector": "list#salesitemlist"
+            },
+            "designerId": "8aef0aab-4f5e-46cf-b60a-8f7c90b0a303"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "salesOrderItemList",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onItemListTapped",
+                "implHandler": [
+                    "        //Load next page\r",
+                    "        var loginForm = Ext.create('widget.salesitemdetail'),\t// Login form\r",
+                    "            mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "        mainView.push({\r",
+                    "            xtype: \"salesitemdetail\",\r",
+                    "            title: \"Item Details\",\r",
+                    "            data: record.getData()\r",
+                    "        });"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "4d0e41ec-48a4-4a92-b79c-d54b789c4b51"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "showMat",
+                "selector": "button#showMat"
+            },
+            "designerId": "fa951d36-48e5-45ea-a43c-b5bcb8fb59b5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "showMat",
+                "designer|targetType": "Ext.Button",
+                "fn": "showMat",
+                "implHandler": [
+                    "/*\r",
+                    "var matID = button.up('salesitemdetail').getValues().ProductID;\r",
+                    "\r",
+                    "\r",
+                    "//this.getFields('ProductID').getValue()\r",
+                    "\r",
+                    "//Load the Store MAterial Masters\r",
+                    "var matStore = Ext.getStore('MaterialMasters');\r",
+                    "var matUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/Products('\" + matID + \"')\";\r",
+                    "matStore.removeAll();\r",
+                    "matStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "matStore.getProxy().setUrl(matUrl);\r",
+                    "matStore.load(function (record, response,mainView) {\r",
+                    "    console.log(\"Request Status : \" + response.success);\r",
+                    "});\r",
+                    "*/\r",
+                    "\r",
+                    "        //Load next page\r",
+                    "        var loginForm = Ext.create('widget.materialmaster'),\t// Login form\r",
+                    "            mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "        mainView.push({\r",
+                    "            xtype: \"materialmaster\",\r",
+                    "            title: \"Material Master\"\r",
+                    "            //data: matStore.getData()\r",
+                    "        });\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "f354b374-65d4-4879-ab42-00ebdade9825"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "salesItemDetail",
+                "selector": "myformpanel1 #myfieldset2",
+                "xtype": "salesitemdetail"
+            },
+            "designerId": "4c1c2bbe-71a7-4368-bea1-c80158828e5c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "byBusinessPartner",
+                "selector": "list#byBPList"
+            },
+            "designerId": "0578cd91-9ec6-4784-8848-4326dd3e6d42"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "byBusinessPartner",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "clickOnByBPList",
+                "implHandler": [
+                    "//Load the Store SalesOrders\r",
+                    "var byBPStore = Ext.getStore('SalesHeaders');\r",
+                    "var byBPUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/BusinessPartners('\" + record.get('BusinessPartnerID') + \"')/SalesOrders\";\r",
+                    "byBPStore.removeAll();\r",
+                    "byBPStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "byBPStore.getProxy().setUrl(byBPUrl);\r",
+                    "byBPStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Request Status : \" + response.success);\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "var salesForm = Ext.create('widget.salesorders'),\t// Login form\r",
+                    "    mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "// Navigate to login\r",
+                    "mainView.push({\r",
+                    "    xtype: \"salesorders\",\r",
+                    "    title: \"Sales Orders\"\r",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "a89f2cc3-fd0e-4d20-a41a-518d668d5627"
+        }
+    ]
+}

@@ -1,0 +1,244 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesitemdetail",
+        "designer|userClassName": "SalesItemDetail",
+        "itemId": "myformpanel1"
+    },
+    "designerId": "981db4b6-5d23-4678-a455-215d98dc0d45",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": false,
+                "instructions": "Line Item Details",
+                "itemId": "myfieldset2",
+                "styleHtmlContent": true,
+                "title": "Item Level"
+            },
+            "designerId": "d352a651-5e30-4b07-971a-bb9c09306270",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Order ID",
+                        "name": "SalesOrderID",
+                        "readOnly": false
+                    },
+                    "designerId": "b70ffd3d-fdc9-4e8d-9a5f-115e935ea080"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Line Item",
+                        "name": "Position",
+                        "readOnly": true
+                    },
+                    "designerId": "44332276-8402-4b15-842a-f72ff6033d96"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Material",
+                        "name": "ProductName",
+                        "readOnly": false
+                    },
+                    "designerId": "fa379f01-5eaa-4487-b396-a0932e5ff87d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Material No",
+                        "name": "ProductID",
+                        "readOnly": true
+                    },
+                    "designerId": "83845ab1-acf5-47f5-a251-d79fc7df228c"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Quantity",
+                        "name": "Quantity",
+                        "readOnly": true
+                    },
+                    "designerId": "c8a7124c-d45b-428c-a6f8-1cd2c83a1994"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Delivery Date",
+                        "name": "DeliveryDate",
+                        "readOnly": true
+                    },
+                    "designerId": "c6d5b261-525a-4e18-9b01-1a201832bde6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Net Amount",
+                        "name": "NetSum",
+                        "readOnly": true
+                    },
+                    "designerId": "317039f9-7ce0-4673-98be-aa1751750a38"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Tax Amount",
+                        "name": "Tax",
+                        "readOnly": true
+                    },
+                    "designerId": "174edd63-c079-4cd9-a76e-c3e9688b84db"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Total Amount",
+                        "name": "TotalSum",
+                        "readOnly": true
+                    },
+                    "designerId": "ad973ddd-4924-45ff-974d-8ac72d10e2fc"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMyformpanelPainted",
+                "implHandler": [
+                    "\r",
+                    "var data = this;\r",
+                    "//console.log(\"Completed paint event for form\");\r",
+                    "this.setValues(data.getData());\r",
+                    "//http://stackoverflow.com/questions/17899171/how-to-pass-the-selected-item-to-the-next-view\r",
+                    "\r",
+                    "//debugger;\r",
+                    "\r",
+                    "//data.getData().ProductID\r",
+                    "\r",
+                    "//Load the Store MAterial Masters\r",
+                    "var matStore = Ext.getStore('MaterialMasters');\r",
+                    "var matUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/Products('\" + data.getData().ProductID + \"')\";\r",
+                    "matStore.removeAll();\r",
+                    "matStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "matStore.getProxy().setUrl(matUrl);\r",
+                    "matStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Request Status : \" + response.success);\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "painted"
+            },
+            "designerId": "06eb9393-564e-416c-b444-ca9eee55168c"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "docked": "bottom"
+            },
+            "designerId": "1970860c-0f3b-468f-91cf-5f8d8ee70b77",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "center",
+                        "iconCls": "search",
+                        "itemId": "showMat",
+                        "text": "Material"
+                    },
+                    "designerId": "2c49fa20-20a3-4275-8639-fe76ac20d92e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton7Tap",
+                                "implHandler": [
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "5d9b474e-63c5-4543-a92e-041a8ae14ff1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "id": null,
+        "update": "delta",
+        "url": "OData.js"
+    },
+    "designerId": "af607eaa-a7f2-442c-ba27-04bd1a3fbcfb"
+}

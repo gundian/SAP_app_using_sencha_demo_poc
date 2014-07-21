@@ -1,0 +1,14 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BusinessPartners",
+        "model": "BusinessPartner",
+        "storeId": "BusinessPartners"
+    },
+    "designerId": "db850396-d0e7-4ab4-beef-6b508f221ef2"
+}

@@ -1,0 +1,139 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesorderview",
+        "designer|userClassName": "SalesOrderView",
+        "itemId": "myformpanel"
+    },
+    "designerId": "b4928aaf-ff92-4060-9509-abaae63097ad",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": false,
+                "instructions": "Header",
+                "itemId": "myfieldset2",
+                "styleHtmlContent": true,
+                "title": "Sales Order"
+            },
+            "designerId": "a00c76e4-f78f-488f-9fa7-d19a634b9ab7",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Order ID",
+                        "name": "SalesOrderID",
+                        "readOnly": true
+                    },
+                    "designerId": "5323e913-42a1-4ef1-9aaa-4068a7d9978d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Customer Name",
+                        "name": "CustomerName",
+                        "readOnly": true
+                    },
+                    "designerId": "144ba763-3417-4e66-bf3e-6f6a0b41edee"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Created",
+                        "name": "CreatedAt",
+                        "readOnly": true
+                    },
+                    "designerId": "c0482956-12fb-4fe9-93c7-3889fcd4b287"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "label": "Completed",
+                        "name": "Status"
+                    },
+                    "designerId": "5f26b58b-8fc1-4adc-893b-e39e6733b1e3"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Description",
+                        "maxRows": 2,
+                        "name": "Note",
+                        "readOnly": true
+                    },
+                    "designerId": "88c66ad5-8c0e-470f-9410-b4675b719d83"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Amount",
+                        "name": "NetSum",
+                        "readOnly": true
+                    },
+                    "designerId": "7aab2eb7-19d4-4f56-ab2b-77bf21db1a0f"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMyformpanelPainted",
+                "implHandler": [
+                    "//debugger;\r",
+                    "var data = this.up();\r",
+                    "//console.log(\"Completed paint event for form\");\r",
+                    "this.setValues(data.getData());\r",
+                    "//http://stackoverflow.com/questions/17899171/how-to-pass-the-selected-item-to-the-next-view"
+                ],
+                "name": "painted"
+            },
+            "designerId": "cf4ccae7-7bf4-4b4b-8e42-b42c2c92cd2b"
+        }
+    ]
+}

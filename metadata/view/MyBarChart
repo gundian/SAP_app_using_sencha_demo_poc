@@ -1,0 +1,100 @@
+{
+    "type": "Ext.chart.CartesianChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "colors": [
+            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+        ],
+        "designer|userAlias": "mybarchart",
+        "designer|userClassName": "MyBarChart",
+        "store": "ChartStore",
+        "styleHtmlContent": true
+    },
+    "designerId": "29d390c6-8888-4bd1-b285-7066b41b53c4",
+    "isBuiltIn": true,
+    "iconCls": "icon-bar-chart",
+    "autoName": "MyBarChart",
+    "cn": [
+        {
+            "type": "Ext.chart.axis.Category",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "name"
+                ]
+            },
+            "designerId": "a5a6bf87-ce90-48e9-9baa-c7a4b58e8c15"
+        },
+        {
+            "type": "Ext.chart.axis.Numeric",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "OrderCount",
+                    "OrderAmount"
+                ],
+                "grid": [
+                    "{",
+                    "    odd: {",
+                    "        fill: '#e8e8e8'",
+                    "    }",
+                    "}"
+                ],
+                "position": "left"
+            },
+            "designerId": "12b8a04b-49d3-432c-9ddb-6be02e7d6be6"
+        },
+        {
+            "type": "Ext.chart.series.Bar",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "stacked": false,
+                "xField": "name",
+                "yField": [
+                    "OrderCount",
+                    "OrderAmount"
+                ]
+            },
+            "designerId": "b26f11a8-63d1-409e-b482-3ca841b6ae25"
+        },
+        {
+            "type": "Ext.chart.interactions.PanZoom",
+            "reference": {
+                "name": "interactions",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "a27c4560-7fee-4fc6-990b-5abe136ca131"
+        },
+        {
+            "type": "Ext.chart.Legend",
+            "reference": {
+                "name": "legend",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": false,
+                "store": "ChartStore",
+                "styleHtmlContent": true
+            },
+            "designerId": "cdf4b4d0-f718-4484-99b0-e6322abf633b"
+        }
+    ]
+}

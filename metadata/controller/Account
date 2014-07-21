@@ -1,0 +1,354 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Account"
+    },
+    "designerId": "281224ab-8461-4b2e-9888-353e3182bb15",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #showLoginButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "showLogin",
+                "implHandler": [
+                    "\r",
+                    "var loginForm = Ext.create('widget.loginform'),\t// Login form\r",
+                    "    mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "// Navigate to login\r",
+                    "mainView.push({\r",
+                    "    xtype: \"loginform\",\r",
+                    "    title: \"Choose the option\"\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "382eaa3d-63ef-45db-8f5d-639c2def90f4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #showRegisterButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "showRegister",
+                "implHandler": [
+                    "\r",
+                    "var registerForm = Ext.create('widget.registerform'),\t// Registration form\r",
+                    "    mainView = this.getMainView();\t\t\t\t\t\t// Main view\r",
+                    "\r",
+                    "// Navigate to register\r",
+                    "mainView.push({\r",
+                    "    xtype: \"registerform\",\r",
+                    "    title: \"Register\"\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "25893cb2-9fca-4cb3-b457-2e12b9102711"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginform #loginButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "login",
+                "implHandler": [
+                    "/*\r",
+                    "var form = button.up('formpanel'),\t\t\t// Login form\r",
+                    "\tvalues = form.getValues(),\t\t\t\t// Form values\r",
+                    "\tmainView = this.getMainView(),\t\t\t// Main view\r",
+                    "\tloginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
+                    "\twelcomePanel = this.getWelcomePanel();\t// Welcome panel\r",
+                    "\r",
+                    "// Success\r",
+                    "var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Go back\r",
+                    "    mainView.pop();\r",
+                    "\r",
+                    "    // Hide login panel\r",
+                    "    loginPanel.hide();\r",
+                    "\r",
+                    "    // Show welcome panel\r",
+                    "    welcomePanel.show();\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "// Failure\r",
+                    "var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Show login failure error\r",
+                    "    Ext.Msg.alert(\"Login Failure\", resp);\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "// TODO: Login using server-side authentication service\r",
+                    "// Ext.Ajax.request({\r",
+                    "//\t\turl: \"/api/login\",\r",
+                    "//\t\tparams: values,\r",
+                    "//\t\tsuccess: successCallback,\r",
+                    "//\t\tfailure: failureCallback\r",
+                    "// });\r",
+                    "\r",
+                    "// Just run success for now\r",
+                    "successCallback();\r",
+                    "*/\r",
+                    "\r",
+                    "//Load the Store SalesOrders\r",
+                    "var byBPStore = Ext.getStore('SalesHeaders');\r",
+                    "var byBPUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/SalesOrders\";\r",
+                    " byBPUrl = \"http://uvo171cj1u5m9rqiv41.vm.cld.sr:8080/com.pavan.sales/SalesOrders\"; //++PAVAN for SMP3.0\r",
+                    "\r",
+                    "byBPStore.removeAll();\r",
+                    "//byBPStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "byBPStore.getProxy().setUrl(byBPUrl);\r",
+                    "byBPStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Request Status : \" + response.success);\r",
+                    "});\r",
+                    "\r",
+                    "        var salesForm = Ext.create('widget.salesorders'),\t// Login form\r",
+                    "            mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "        // Navigate to login\r",
+                    "        mainView.push({\r",
+                    "            xtype: \"salesorders\",\r",
+                    "            title: \"Sales Orders\"\r",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "designerId": "613f385b-036d-4465-acb4-0d48731462d6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "registerform #registerButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "register",
+                "implHandler": [
+                    "\r",
+                    "var form = button.up('formpanel'),\t\t\t// Login form\r",
+                    "    values = form.getValues(),\t\t\t\t// Form values\r",
+                    "    mainView = this.getMainView(),\t\t\t// Main view\r",
+                    "    loginPanel = this.getLoginPanel(),\t\t// Login and register buttons\r",
+                    "    welcomePanel = this.getWelcomePanel();\t// Welcome panel\r",
+                    "\r",
+                    "// Success\r",
+                    "var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Go back\r",
+                    "    mainView.pop();\r",
+                    "\r",
+                    "    // Hide login panel\r",
+                    "    loginPanel.hide();\r",
+                    "\r",
+                    "    // Show welcome panel\r",
+                    "    welcomePanel.show();\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "// Failure\r",
+                    "var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Show login failure error\r",
+                    "    Ext.Msg.alert(\"Registration Failure\", resp);\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "// TODO: Register using server-side authentication service\r",
+                    "// Ext.Ajax.request({\r",
+                    "//\t\turl: \"/api/register\",\r",
+                    "//\t\tparams: values,\r",
+                    "//\t\tsuccess: successCallback,\r",
+                    "//\t\tfailure: failureCallback\r",
+                    "// });\r",
+                    "\r",
+                    "// Just run success for now\r",
+                    "successCallback();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "51e9db8a-f205-4d3a-a624-378ed18bf4f2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview"
+            },
+            "designerId": "ed84a4c2-2097-4f3b-b1e3-607495319c7a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginPanel",
+                "selector": "mainview #loginPanel"
+            },
+            "designerId": "4bc740f2-2c6d-4ed4-bee3-fcfc264e0658"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "welcomePanel",
+                "selector": "mainview #welcomePanel"
+            },
+            "designerId": "fade38f6-e579-409b-b1a7-aa4af3c7c505"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "byBP",
+                "selector": "button#ByBP"
+            },
+            "designerId": "31208e82-b48c-48ca-9265-984e6ceffba2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#ByBP",
+                "designer|targetType": "Ext.Button",
+                "fn": "byBP",
+                "implHandler": [
+                    "//Load the Store BusinessPartner\r",
+                    "var businessStore = Ext.getStore('BusinessPartners');\r",
+                    "var businessUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/BusinessPartners\";\r",
+                    "businessStore.removeAll();\r",
+                    "businessStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "businessStore.getProxy().setEnablePagingParams(true);\r",
+                    "businessStore.getProxy().setUseDefaultXhrHeader(true);\r",
+                    "businessStore.getProxy().setUrl(businessUrl);\r",
+                    "businessStore.load(function (record, response,mainView) {\r",
+                    "    //console.log(\"Business Partner Request Status : \" + response.success);\r",
+                    "});\r",
+                    "\r",
+                    "var salesForm = Ext.create('widget.bybusinesspartner'),\t// Login form\r",
+                    "    mainView = this.getMainView();\t\t\t\t// Main view\r",
+                    "\r",
+                    "// Navigate to login\r",
+                    "mainView.push({\r",
+                    "    xtype: \"bybusinesspartner\",\r",
+                    "    title: \"Customers\"\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "e34e8780-0c85-48aa-8ded-f46aae7cb6c8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#showGraph",
+                "designer|targetType": "Ext.Button",
+                "fn": "showGraph",
+                "implHandler": [
+                    "\r",
+                    "        //Load the Store SalesOrders\r",
+                    "        var byBPStore = Ext.getStore('SalesHeaders');\r",
+                    "if (byBPStore.getCount() <=0){\r",
+                    "   // alert(\"Loading store\");\r",
+                    "        var byBPUrl = \"https://sapes1.sapdevcenter.com/sap/opu/odata/sap/ZCD204_EPM_DEMO_SRV/SalesOrders\";\r",
+                    "        byBPStore.removeAll();\r",
+                    "        byBPStore.getProxy().setPassword(\"Praveen123\");\r",
+                    "        byBPStore.getProxy().setUrl(byBPUrl);\r",
+                    "        byBPStore.load(function (record, response,mainView) {\r",
+                    "            //console.log(\"Request Status : \" + response.success);\r",
+                    "\r",
+                    "        });\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    //alert(\"Graph table exists >>\" + byBPStore.getCount());\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "var registerForm = Ext.create('widget.mybarchart'),\t// Registration form\r",
+                    "    mainView = this.getMainView();\t\t\t\t\t\t// Main view\r",
+                    "\r",
+                    "// Navigate to register\r",
+                    "mainView.push({\r",
+                    "    xtype: \"mybarchart\",\r",
+                    "    title: \"Analytics\"\r",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "designerId": "340c80f7-bdbc-4f4a-aa58-d04ade72bd72"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "showGraph",
+                "selector": "button#showGraph"
+            },
+            "designerId": "e4e9d18b-28d4-4b6d-9ee6-5426bf4e67c1"
+        }
+    ]
+}

@@ -1,0 +1,226 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "salesheader",
+        "designer|userClassName": "SalesHeader"
+    },
+    "designerId": "24f34f68-0204-40fc-99d0-78629905b7fc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "SalesOrderID"
+            },
+            "designerId": "72a9a79b-c639-4b44-a102-2e0060dc1c0b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NetSum"
+            },
+            "designerId": "6d0bb3db-b76a-48f5-bf56-04f6445a5a1a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Tax"
+            },
+            "designerId": "b5456226-0244-4b45-913e-a99d2c36796f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Currency"
+            },
+            "designerId": "441daecb-14e9-47c4-b5b2-7a98c4331162"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ChangedAt"
+            },
+            "designerId": "c603158b-c8c2-46dd-b04f-2b196eea91c7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Note"
+            },
+            "designerId": "a60d715e-332a-4811-a12b-9f6ef878685b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": null,
+                "name": "CreatedAt",
+                "type": "date"
+            },
+            "designerId": "a9a4f2f3-a6a7-4ed1-bb54-28b719c4abde",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return v.substring(0,10);\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "5fc45d8a-17b4-44b8-be31-10b0c6534bac"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TotalSum"
+            },
+            "designerId": "249b855f-d7d7-492e-8048-0835b5a01634"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Status"
+            },
+            "designerId": "c6415b5b-b1be-4d8f-9628-a4637b3841c1",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "if (v===\"N\"){\r",
+                            "    return false;\r",
+                            "}else{\r",
+                            "    return true;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "53c26a90-a4af-43cc-b014-8da8387979eb"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CustomerName"
+            },
+            "designerId": "f31a6211-46b2-4417-aa69-e6efc43ce1d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BusinessPartnerID"
+            },
+            "designerId": "efd1be21-fc3b-4837-bc88-b77086b75d1f"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "limitParam": "top",
+                "startParam": "skip",
+                "url": "http://uvo171cj1u5m9rqiv41.vm.cld.sr:8080/com.sales/SalesOrders",
+                "useDefaultXhrHeader": false
+            },
+            "designerId": "202a5904-000b-4ecd-902a-a6b47b915203",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Xml",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "record": "entry",
+                        "rootProperty": null
+                    },
+                    "designerId": "a9cdfacd-a4bc-4e25-84ea-f9c10bb1647c"
+                }
+            ]
+        }
+    ]
+}

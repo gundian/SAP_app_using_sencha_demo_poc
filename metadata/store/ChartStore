@@ -1,0 +1,15 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "chartstore",
+        "designer|userClassName": "ChartStore",
+        "model": "ChartModel",
+        "storeId": "ChartStore"
+    },
+    "designerId": "66ccdfa3-4188-4d1a-8438-a01e339ea2c7"
+}

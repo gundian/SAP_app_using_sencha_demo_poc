@@ -1,0 +1,15 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "materialmasters",
+        "designer|userClassName": "MaterialMasters",
+        "model": "MaterialMaster",
+        "storeId": "MaterialMasters"
+    },
+    "designerId": "079d4ee0-ce88-43e4-a93b-10320f0f2427"
+}
